@@ -1,0 +1,151 @@
+﻿.open-popup{
+	position: fixed;
+	border: 50px;
+	border-color: black;
+}
+.popupwin {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,0.5);
+	opacity: 0; 
+	pointer-events: none; 
+}
+
+.popupwin.active { 
+	opacity: 1; 
+	pointer-events: all; 
+}
+
+.popup {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0); 
+	background: #169eb9;
+	width: 275px;
+	padding: 40px;
+}
+
+.popup.active { 
+	transform: translate(-50%, -50%) scale(1); 
+}
+
+.close-popup {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	height: 30px;
+	width: 30px;
+}
+
+.popup label {
+	width: 100%;
+	margin-bottom: 25px;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.popup .label__text {
+	display: flex;
+    font-size: 19px;
+    font-weight: 500;
+    color: #2a3a3c;
+    margin-bottom: 5px;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.popup input {
+	height: 20px;
+	font-size: 15px;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #cfd0d3;
+}
+
+
+.popup textarea {
+	resize: none;
+	width: 100%;
+	height: 123px;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #cfd0d3;
+	font-size: 18px;
+	padding-top: 5px;
+}
+
+
+
+.popup button {
+	width: 100%;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+	font-size: 18px;
+	border: 2px solid #6210c1;
+	background: #680823;
+	cursor: pointer;
+}
+
+
+.custom-checkbox { 
+	display: flex;
+}
+
+.custom-checkbox .checkbox {
+	margin-right: 10px;
+}
+
+.custom-checkbox input {
+	position: absolute;                   
+}
+
+.checkbox { 
+	position: relative;
+	width: 20px;
+	height: 20px;
+	border: 2px solid rgb(255, 255, 255);
+	background: rgb(255, 255, 255);
+}
+
+.checkmark {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	height: auto;
+	display: none;
+}
+
+.custom-checkbox input:checked ~ .checkbox .checkmark {
+	display: block;
+}
+
+.custom-checkbox input:checked ~ .checkbox {
+	background: rgb(48, 86, 57);
+	border: 2px solid rgb(51, 78, 61);
+}
+
+@media only screen and (min-width: 800px) {
+	.popup {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0); 
+	background: #01a3c4;
+	width: 688px;
+	padding: 40px;
+
+}
+}
